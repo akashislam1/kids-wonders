@@ -8,15 +8,15 @@ const NavBar = () => {
 
   return (
     <div className="relative shadow-md rounded-md bg-[#4acdd5] text-white font-bold">
-      <div className="w-full md:w-5/6 mx-auto hidden md:block">
+      <div className="w-full  mx-auto hidden md:block">
         <nav className=" z-50 p-4 rounded-md flex justify-between items-center ">
           <h2>
             <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="" />
-              <p>Kids Wonders</p>
+              <img className="w-14" src={logo} alt="" />
+              <p className="text-xl">Kids Wonders</p>
             </Link>
           </h2>
-          <div className="flex items-center gap-3 font-semibold ">
+          <div className="flex items-center gap-3 font-semibold mr-11">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "default")}
@@ -35,7 +35,7 @@ const NavBar = () => {
       <div className="p-4 md:hidden shadow-md rounded-md flex justify-between items-center">
         <h2 className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="" />
+            <img className="w-14" src={logo} alt="" />
             <p>Kids Wonders</p>
           </Link>
         </h2>
