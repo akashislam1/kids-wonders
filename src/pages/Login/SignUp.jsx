@@ -10,6 +10,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { createUser, updateUserProfile, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   // handle sign up
   const handleSubmit = (e) => {
@@ -20,7 +21,7 @@ const SignUp = () => {
     // create user
     createUser(email, password)
       .then((result) => {
-        const signedUser = result.userPhotoUr;
+        const signedUser = result.user;
         // update user profile
         updateUserProfile(signedUser, username, userPhotoUrl)
           .then(() => {})
@@ -28,6 +29,7 @@ const SignUp = () => {
             setError(error.message);
           });
         setUser(signedUser);
+        navigate("/login");
         e.target.reset();
         setError("");
       })

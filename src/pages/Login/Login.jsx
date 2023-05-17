@@ -22,8 +22,9 @@ const Login = () => {
         setUser(loggedInUser);
         e.target.reset();
         setError(" ");
+        alert("logged in");
       })
-      .catcH((err) => {
+      .catch((err) => {
         setError(err.message);
       });
   };

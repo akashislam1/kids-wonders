@@ -1,11 +1,23 @@
-import { useState } from "react";
-import { FaList, FaTimes } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { FaList, FaTimes, FaUserCircle } from "react-icons/fa";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const NavBar = () => {
   const [menu, setMenu] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        navigate("/");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
   return (
     <div className="relative shadow-md rounded-md bg-[#4acdd5] text-white font-bold">
       <div className="w-full  mx-auto hidden md:block">
@@ -29,6 +41,37 @@ const NavBar = () => {
             >
               Blog
             </NavLink>
+            {user ? (
+              <div className="flex items-center gap-3">
+                <Link onClick={handleLogOut}>Sign Out</Link>
+                {user.photoURL ? (
+                  <div className="group flex relative cursor-pointer">
+                    <img
+                      className="w-8 h-8 rounded-full "
+                      src={user.photoURL}
+                      alt=""
+                    />
+                    <span className="group-hover:opacity-100 transition-opacity bg-gray-800 text-sm text-gray-100 rounded-md absolute left-1/2  -translate-x-1/2 translate-y-full opacity-0 mt-5 mx-auto py-1 px-2 w-28 text-center">
+                      {user.displayName}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="group flex relative cursor-pointer">
+                    <FaUserCircle className="w-8 h-8"></FaUserCircle>
+                    <span className="group-hover:opacity-100 transition-opacity bg-gray-800 text-sm text-gray-100 rounded-md absolute left-1/2  -translate-x-1/2 translate-y-full opacity-0 mt-5 mx-auto py-1 px-2 w-28 text-center">
+                      {user.displayName}
+                    </span>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Login
+              </NavLink>
+            )}
           </div>
         </nav>
       </div>
@@ -67,10 +110,10 @@ const NavBar = () => {
                 Blog
               </NavLink>
             </li>
-            {/* <li>
+            <li>
               {user ? (
                 <div className="flex justify-center items-center flex-col gap-3">
-                  <Link onClick={logOut}>Sign Out</Link>
+                  <Link onClick={handleLogOut}>Sign Out</Link>
                   {user.photoURL ? (
                     <div className="group flex relative cursor-pointer">
                       <img
@@ -101,7 +144,7 @@ const NavBar = () => {
                   Login
                 </NavLink>
               )}
-            </li> */}
+            </li>
           </ul>
         </div>
       )}
