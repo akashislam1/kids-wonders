@@ -41,8 +41,30 @@ const NavBar = () => {
             >
               Blog
             </NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "default")}
+            >
+              All Toys
+            </NavLink>
             {user ? (
               <div className="flex items-center gap-3">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Add A Toy
+                </NavLink>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  My Toys
+                </NavLink>
                 <Link onClick={handleLogOut}>Sign Out</Link>
                 {user.photoURL ? (
                   <div className="group flex relative cursor-pointer">
