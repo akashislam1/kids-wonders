@@ -1,18 +1,31 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import SocialLogin from "../shared/SocialLogin";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passShow, setPassShow] = useState(false);
   const [error, setError] = useState("");
+  const { signIn, setUser } = useContext(AuthContext);
 
   // handle login
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
+    // login user
+    signIn(email, password)
+      .then((result) => {
+        const loggedInUser = result.user;
+        setUser(loggedInUser);
+        e.target.reset();
+        setError(" ");
+      })
+      .catcH((err) => {
+        setError(err.message);
+      });
   };
 
   return (
@@ -74,7 +87,7 @@ const Login = () => {
             </button>
           </div>
           <div className=" my-4 font-bold">
-            <SocialLogin></SocialLogin>
+            <SocialLogin setError={setError}></SocialLogin>
           </div>
           <div className="my-4">
             <p className="inline-block align-baseline font-bold text-sm mr-1 ">

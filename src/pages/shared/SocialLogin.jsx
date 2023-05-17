@@ -1,6 +1,25 @@
-const SocialLogin = () => {
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+
+const SocialLogin = ({ setError }) => {
+  const { googleLogin, setUser } = useContext(AuthContext);
+
+  const loginWithGoogle = () => {
+    googleLogin()
+      .then((result) => {
+        const googleLoginUser = result.user;
+        setUser(googleLoginUser);
+        setError(" ");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
   return (
-    <button className="flex justify-center items-center gap-3 border border-[#4acdd5] py-2 px-3 rounded-md">
+    <button
+      onClick={loginWithGoogle}
+      className="flex justify-center items-center gap-3 border border-[#4acdd5] py-2 px-3 rounded-md"
+    >
       <span>
         <svg
           className="w-6 h-6"

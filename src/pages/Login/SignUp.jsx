@@ -122,7 +122,7 @@ const SignUp = () => {
             </button>
           </div>
           <div className="my-4 font-bold">
-            <SocialLogin></SocialLogin>
+            <SocialLogin setError={setError}></SocialLogin>
           </div>
           <div className="my-4">
             <p className="inline-block align-baseline font-bold text-sm mr-1 ">
