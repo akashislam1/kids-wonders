@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  @apply font-medium tracking-wide  text-[#1c6d72] transition-colors duration-200;
+}
