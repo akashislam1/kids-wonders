@@ -1,8 +1,7 @@
 import React from "react";
-import { FaRegStar, FaStar } from "react-icons/fa";
-import Rating from "react-rating";
 import { useLoaderData, useLocation } from "react-router-dom";
 import { useScrollTop } from "../../Hooks/useScrollTop";
+import { Rating } from "@smastrom/react-rating";
 
 const SingleToyDetails = () => {
   const singledata = useLoaderData();
@@ -20,7 +19,6 @@ const SingleToyDetails = () => {
     available_quantity,
   } = singledata;
 
-  console.log(singledata);
   return (
     <div className=" w-full md:w-2/3 mx-auto">
       <h2 className="text-center font-bold text-4xl underline mt-5 mb-8">
@@ -44,17 +42,13 @@ const SingleToyDetails = () => {
               <p>Price : ${price}</p>
               <p>Available quantity : {available_quantity}</p>
             </div>
-            <p>
+            <div className="flex justify-center">
               <Rating
-                readonly
-                placeholderRating={rating}
-                emptySymbol={<FaRegStar></FaRegStar>}
-                placeholderSymbol={
-                  <FaStar className="text-yellow-400"></FaStar>
-                }
-                fullSymbol={<FaStar></FaStar>}
-              ></Rating>
-            </p>
+                style={{ maxWidth: 100 }}
+                value={Math.round(rating || 0)}
+                readOnly
+              />
+            </div>
           </div>
         </div>
       </div>

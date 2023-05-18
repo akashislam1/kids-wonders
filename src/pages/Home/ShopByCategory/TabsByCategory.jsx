@@ -1,5 +1,4 @@
-import Rating from "react-rating";
-import { FaRegStar, FaStar } from "react-icons/fa";
+import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 
 const TabsByCategory = ({ toy }) => {
@@ -16,15 +15,13 @@ const TabsByCategory = ({ toy }) => {
       <div className="text-center border-t-2">
         <h2 className="font-bold text-xl my-4">Name : {toy_name}</h2>
         <p>Price : ${price}</p>
-        <p className="mt-2 mb-5">
+        <div className="mt-2 mb-5 flex justify-center">
           <Rating
-            readonly
-            placeholderRating={rating}
-            emptySymbol={<FaRegStar></FaRegStar>}
-            placeholderSymbol={<FaStar className="text-yellow-400"></FaStar>}
-            fullSymbol={<FaStar></FaStar>}
-          ></Rating>
-        </p>
+            style={{ maxWidth: 100 }}
+            value={Math.round(rating || 0)}
+            readOnly
+          />
+        </div>
         <Link to={`/toy-details/${_id}`}>
           <button className="font-bold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
             View Details
