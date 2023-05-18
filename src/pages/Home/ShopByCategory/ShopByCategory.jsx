@@ -25,7 +25,7 @@ const ShopByCategory = () => {
   const items = (
     <div className="flex flex-col md:flex-row md:gap-8 overflow-x-hidden overflow-y-hidden">
       {isLoading ? (
-        <div className="flex justify-center">
+        <div className="w-2/3 mx-auto">
           <LoadingSpinner></LoadingSpinner>
         </div>
       ) : (
@@ -39,16 +39,16 @@ const ShopByCategory = () => {
   return (
     <div className="p-4 w-full md:w-2/3 mx-auto ">
       <h2 className="text-center font-bold text-4xl underline mt-5 mb-8">
-        Shop By Category
+        <span className="text-[#4acdd5] underline">Shop</span> By Category
       </h2>
-      <Tabs id="controlled-tabs" selectedTabClassName="bg-white ">
-        <TabList className="flex  md:justify-center items-center gap-2 text-xs md:text-xl font-bold ">
+      <Tabs id="controlled-tabs" selectedTabClassName="bg-white">
+        <TabList className="flex md:justify-center items-center gap-2 text-xs md:text-xl font-bold ">
           <Tab onClick={() => handleTabClick("sports-car")}>
             <h2
-              className={`rounded-full px-6 py-2  ${
+              className={`rounded-full  md:px-6 md:py-2  ${
                 activeTab == "sports-car"
                   ? " bg-cyan-400 text-white text-center"
-                  : ""
+                  : "bg-slate-100"
               }`}
             >
               Sports cars
@@ -56,7 +56,7 @@ const ShopByCategory = () => {
           </Tab>
           <Tab onClick={() => handleTabClick("police-car")}>
             <h2
-              className={`rounded-full  px-6 py-2 ${
+              className={`rounded-full  md:px-6 md:py-2  ${
                 activeTab == "police-car"
                   ? " bg-cyan-400 text-white text-center"
                   : "bg-slate-100"
@@ -66,9 +66,8 @@ const ShopByCategory = () => {
             </h2>
           </Tab>
           <Tab onClick={() => handleTabClick("fire-truck")}>
-            {" "}
             <h2
-              className={`rounded-full  px-6 py-2 ${
+              className={`rounded-full  md:px-6 md:py-2  ${
                 activeTab == "fire-truck"
                   ? " bg-cyan-400 text-white text-center"
                   : "bg-slate-100"

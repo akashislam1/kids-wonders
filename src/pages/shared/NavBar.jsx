@@ -42,7 +42,7 @@ const NavBar = () => {
               Blog
             </NavLink>
             <NavLink
-              to="/"
+              to="/allToys"
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               All Toys
@@ -130,6 +130,14 @@ const NavBar = () => {
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
                 Blog
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/allToys"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                All Toys
               </NavLink>
             </li>
             <li>
