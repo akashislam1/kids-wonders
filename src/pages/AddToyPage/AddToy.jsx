@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddToy = () => {
+  const { user } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -25,6 +27,15 @@ const AddToy = () => {
       detail_description: description,
     };
     console.log(data);
+    fetch("http://localhost:5000/post-toy", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
   return (
     <div className="w-full md:w-3/4 mx-auto my-7 shadow-2xl rounded-md">
@@ -53,7 +64,7 @@ const AddToy = () => {
               <input
                 type="text"
                 name="sellerName"
-                defaultValue="d@gmail.com"
+                defaultValue={user?.displayName}
                 placeholder="Seller Name"
                 readOnly
                 className="mt-1 px-3 py-1 block w-full border border-[#4acdd5] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
@@ -68,7 +79,7 @@ const AddToy = () => {
               <input
                 type="email"
                 name="sellerEmail"
-                defaultValue="d@gmail.com"
+                defaultValue={user?.email}
                 placeholder="Seller Email"
                 readOnly
                 className="mt-1 px-3 py-1 block w-full border border-[#4acdd5] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"

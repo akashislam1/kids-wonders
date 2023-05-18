@@ -29,9 +29,11 @@ const ShopByCategory = () => {
           <LoadingSpinner></LoadingSpinner>
         </div>
       ) : (
-        toys?.map((toy) => (
-          <TabsByCategory key={toy._id} toy={toy}></TabsByCategory>
-        ))
+        toys
+          ?.slice(0, 3)
+          .map((toy) => (
+            <TabsByCategory key={toy._id} toy={toy}></TabsByCategory>
+          ))
       )}
     </div>
   );
