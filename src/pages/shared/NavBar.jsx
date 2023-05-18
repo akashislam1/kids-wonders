@@ -50,7 +50,7 @@ const NavBar = () => {
             {user ? (
               <div className="flex items-center gap-3">
                 <NavLink
-                  to="/"
+                  to="/addtoy"
                   className={({ isActive }) =>
                     isActive ? "active" : "default"
                   }
@@ -116,33 +116,57 @@ const NavBar = () => {
       {menu && (
         <div className="z-50 absolute inset-y-16 left-0 w-full max-h-min bg-[#4acdd5] p-5 text-white">
           <ul className="text-center font-bold">
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/blogs"
-                className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                Blog
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/allToys"
-                className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                All Toys
-              </NavLink>
-            </li>
+            <div className="flex flex-col items-center gap-3 mb-3">
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/blogs"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/allToys"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  All Toys
+                </NavLink>
+              </li>
+            </div>
             <li>
               {user ? (
-                <div className="flex justify-center items-center flex-col gap-3">
+                <div className="flex flex-col items-center gap-3">
+                  <NavLink
+                    to="/addtoy"
+                    className={({ isActive }) =>
+                      isActive ? "active" : "default"
+                    }
+                  >
+                    Add A Toy
+                  </NavLink>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? "active" : "default"
+                    }
+                  >
+                    My Toys
+                  </NavLink>
                   <Link onClick={handleLogOut}>Sign Out</Link>
                   {user.photoURL ? (
                     <div className="group flex relative cursor-pointer">

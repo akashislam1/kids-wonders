@@ -10,7 +10,6 @@ const ToyTable = ({ toy, index }) => {
     rating,
     seller_name,
     subCategory,
-    detail_description,
     available_quantity,
   } = toy;
   return (
