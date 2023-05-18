@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
+      <footer className="footer  p-10 bg-base-200 text-base-content">
         <div>
           <span className="footer-title">Services</span>
           <a className="link link-hover">Branding</a>
@@ -28,7 +28,7 @@ const Footer = () => {
             <label className="label">
               <span className="label-text">Enter your email address</span>
             </label>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-start">
               <input
                 type="text"
                 placeholder="Enter your email address"

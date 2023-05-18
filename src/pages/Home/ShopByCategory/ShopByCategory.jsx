@@ -39,7 +39,7 @@ const ShopByCategory = () => {
   );
 
   return (
-    <div className="p-4 w-full md:w-2/3 mx-auto ">
+    <div className="p-4 w-full md:w-3/4 mx-auto">
       <h2 className="text-center font-bold text-4xl underline mt-5 mb-8">
         <span className="text-[#4acdd5] underline">Shop</span> By Category
       </h2>

@@ -1,17 +1,8 @@
 import React from "react";
 
 const ToyTable = ({ toy, index }) => {
-  console.log(toy);
-  const {
-    _id,
-    toy_name,
-    picture,
-    price,
-    rating,
-    seller_name,
-    subCategory,
-    available_quantity,
-  } = toy;
+  const { _id, toy_name, price, seller_name, subCategory, available_quantity } =
+    toy;
   return (
     <tr>
       <td className="px-6 py-4 whitespace-nowrap">{index + 1}</td>

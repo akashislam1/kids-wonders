@@ -2,7 +2,6 @@ import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 
 const TabsByCategory = ({ toy }) => {
-  console.log(toy);
   const { _id, toy_name, picture, price, rating } = toy;
 
   return (
@@ -13,7 +12,7 @@ const TabsByCategory = ({ toy }) => {
     >
       <img className="w-64 h-64" src={picture} alt="" />
       <div className="text-center border-t-2">
-        <h2 className="font-bold text-xl my-4">Name : {toy_name}</h2>
+        <h2 className="font-bold  my-4">Name : {toy_name}</h2>
         <p>Price : ${price}</p>
         <div className="mt-2 mb-5 flex justify-center">
           <Rating
