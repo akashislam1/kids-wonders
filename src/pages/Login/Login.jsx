@@ -1,5 +1,5 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import SocialLogin from "../shared/SocialLogin";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -10,6 +10,10 @@ const Login = () => {
   const [passShow, setPassShow] = useState(false);
   const [error, setError] = useState("");
   const { signIn, setUser } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const from = location.state?.from?.pathname || "/";
 
   // handle login
   const handleSubmit = (e) => {
@@ -21,8 +25,8 @@ const Login = () => {
         const loggedInUser = result.user;
         setUser(loggedInUser);
         e.target.reset();
+        navigate(from, { replace: true });
         setError(" ");
-        alert("logged in");
       })
       .catch((err) => {
         setError(err.message);
