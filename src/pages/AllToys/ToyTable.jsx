@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ToyTable = ({ toy, index }) => {
   const { _id, toy_name, price, seller_name, subCategory, available_quantity } =
@@ -14,9 +15,11 @@ const ToyTable = ({ toy, index }) => {
         {available_quantity}
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
-        <button className="px-4 py-2 text-white bg-blue-500 rounded-md">
-          View Details
-        </button>
+        <Link to={`/toy-details/${_id}`}>
+          <button className="font-bold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline">
+            View Details
+          </button>
+        </Link>
       </td>
     </tr>
   );

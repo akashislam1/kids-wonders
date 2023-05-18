@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import SocialLogin from "../shared/SocialLogin";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { useScrollTop } from "../../Hooks/useScrollTop";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -10,10 +11,10 @@ const Login = () => {
   const [passShow, setPassShow] = useState(false);
   const [error, setError] = useState("");
   const { signIn, setUser } = useContext(AuthContext);
-  const location = useLocation();
+  const { location, pathname } = useLocation();
   const navigate = useNavigate();
-
-  const from = location.state?.from?.pathname || "/";
+  useScrollTop(pathname);
+  const from = location?.state?.from?.pathname || "/";
 
   // handle login
   const handleSubmit = (e) => {
