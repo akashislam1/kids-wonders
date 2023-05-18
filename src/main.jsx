@@ -7,11 +7,9 @@ import AuthProvider from "./Provider/AuthProvider";
 import "aos/dist/aos.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <div className="">
-    <React.StrictMode>
-      <AuthProvider>
-        <RouterProvider router={router}></RouterProvider>
-      </AuthProvider>
-    </React.StrictMode>
-  </div>
+  <React.StrictMode>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
+  </React.StrictMode>
 );

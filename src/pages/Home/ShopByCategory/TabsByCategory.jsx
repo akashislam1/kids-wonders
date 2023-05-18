@@ -1,13 +1,11 @@
 import Rating from "react-rating";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import { useEffect } from "react";
-import Aos from "aos";
+import { Link } from "react-router-dom";
 
 const TabsByCategory = ({ toy }) => {
-  const { toy_name, picture, price, rating } = toy;
-  useEffect(() => {
-    Aos.init();
-  }, []);
+  console.log(toy);
+  const { _id, toy_name, picture, price, rating } = toy;
+
   return (
     <div
       data-aos="fade-down"
@@ -27,9 +25,11 @@ const TabsByCategory = ({ toy }) => {
             fullSymbol={<FaStar></FaStar>}
           ></Rating>
         </p>
-        <button className="font-bold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
-          View Details
-        </button>
+        <Link to={`/toy-details/${_id}`}>
+          <button className="font-bold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
+            View Details
+          </button>
+        </Link>
       </div>
     </div>
   );

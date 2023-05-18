@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import car1 from "../../../assets/images/Cars/car1.jpg";
 import car2 from "../../../assets/images/Cars/car2.jpg";
 import car3 from "../../../assets/images/Cars/car3.jpg";
@@ -7,12 +6,8 @@ import car5 from "../../../assets/images/Cars/car5.jpg";
 import car6 from "../../../assets/images/Cars/car6.jpg";
 import car7 from "../../../assets/images/Cars/car7.jpg";
 import car8 from "../../../assets/images/Cars/car8.jpg";
-import Aos from "aos";
 
 const Gallery = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
   return (
     <div className="my-20">
       <div className="text-center font-bold text-4xl underline my-8">
