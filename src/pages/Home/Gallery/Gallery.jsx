@@ -14,11 +14,11 @@ const Gallery = () => {
     Aos.init();
   }, []);
   return (
-    <>
-      <div className="text-center font-bold text-4xl underline">
+    <div className="my-20">
+      <div className="text-center font-bold text-4xl underline my-8">
         Our Toy Collection
       </div>
-      <div className=" grid grid-cols-1 md:grid-cols-4 gap-5  p-4">
+      <div className=" grid grid-cols-1 md:grid-cols-4 gap-5  p-4 overflow-x-hidden overflow-y-hidden">
         <div
           className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-down"
@@ -116,7 +116,7 @@ const Gallery = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@ import AuthProvider from "./Provider/AuthProvider";
 import "aos/dist/aos.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <div className="w-full p-2 md:w-5/6 mx-auto ">
+  <div className="">
     <React.StrictMode>
       <AuthProvider>
         <RouterProvider router={router}></RouterProvider>
