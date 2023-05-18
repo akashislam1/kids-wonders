@@ -1,13 +1,38 @@
 import React from "react";
 
 const AddToy = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const toyName = form.toyName.value;
+    const sellerName = form.sellerName.value;
+    const sellerEmail = form.sellerEmail.value;
+    const quantity = form.quantity.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const category = form.category.value;
+    const photoUrl = form.photoUrl.value;
+    const description = form.description.value;
+    const data = {
+      picture: photoUrl,
+      toy_name: toyName,
+      seller_name: sellerName,
+      seller_email: sellerEmail,
+      available_quantity: quantity,
+      price: price,
+      rating: rating,
+      subCategory: category,
+      detail_description: description,
+    };
+    console.log(data);
+  };
   return (
     <div className="w-full md:w-3/4 mx-auto my-7 shadow-2xl rounded-md">
       <h2 className="text-center font-bold text-4xl underline mt-5 mb-8">
         Add <span className="text-[#4acdd5] underline">Toys</span>
       </h2>
       <div className="w-full md:w-3/4 mx-auto">
-        <form className="space-y-4 w-full p-4">
+        <form onSubmit={handleSubmit} className="space-y-4 w-full p-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700">
@@ -28,6 +53,7 @@ const AddToy = () => {
               <input
                 type="text"
                 name="sellerName"
+                defaultValue="d@gmail.com"
                 placeholder="Seller Name"
                 readOnly
                 className="mt-1 px-3 py-1 block w-full border border-[#4acdd5] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
@@ -41,7 +67,8 @@ const AddToy = () => {
               </label>
               <input
                 type="email"
-                name="email"
+                name="sellerEmail"
+                defaultValue="d@gmail.com"
                 placeholder="Seller Email"
                 readOnly
                 className="mt-1 px-3 py-1 block w-full border border-[#4acdd5] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
@@ -49,12 +76,13 @@ const AddToy = () => {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">
-                Sub Category
+                Available quantity
               </label>
               <input
                 type="text"
-                name="subCategory"
+                name="quantity"
                 required
+                placeholder="0"
                 className="mt-1 px-3 py-1 block w-full border border-[#4acdd5] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
               />
             </div>
@@ -87,27 +115,31 @@ const AddToy = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
+              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                Sub Category <span className="text-red-500">*</span>
+              </label>
+              <select
+                required
+                name="category"
+                className="px-3 py-1 border border-[#4acdd5] text-gray-900 text-sm rounded-lg focus:ring-[#4acdd5] focus:border-[#4acdd5] block w-full "
+              >
+                <option value="sports-car">Sports Car</option>
+                <option value="police-car">Police-Car</option>
+                <option value="fire-truck">Fire Truck</option>
+              </select>
+            </div>
+            <div>
               <label className="block text-sm font-medium text-gray-700">
-                Available quantity
+                Photo Url
               </label>
               <input
-                type="text"
-                name="quantity"
+                type="url"
+                name="photoUrl"
+                placeholder="http://example.com"
                 required
-                placeholder="0"
                 className="mt-1 px-3 py-1 block w-full border border-[#4acdd5] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
               />
             </div>
-            {/* <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Rating
-              </label>
-              <input
-                type="text"
-                name="rating"
-                className="mt-1 block w-full border border-[#4acdd5] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
-              />
-            </div> */}
           </div>
           <div>
             <textarea
