@@ -28,14 +28,17 @@ const Footer = () => {
             <label className="label">
               <span className="label-text">Enter your email address</span>
             </label>
-            <div className="relative ">
+            <div className="flex items-center justify-center">
               <input
                 type="text"
-                placeholder="username@site.com"
-                className="input input-bordered w-full pr-16"
+                placeholder="Enter your email address"
+                className="px-2 py-2 border border-[#4acdd5] rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
               />
-              <button className="btn bg-[#4acdd5] border-[#4acdd5] absolute top-0 right-0 rounded-l-none">
-                Subscribe
+              <button
+                type="submit"
+                className="px-4 py-2 bg-[#4acdd5] text-white rounded-r-md  focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:ring-opacity-50"
+              >
+                Search
               </button>
             </div>
           </div>

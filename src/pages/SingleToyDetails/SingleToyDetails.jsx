@@ -20,7 +20,7 @@ const SingleToyDetails = () => {
   } = singledata;
 
   return (
-    <div className=" w-full md:w-2/3 mx-auto">
+    <div className="w-full md:w-2/3 mx-auto">
       <h2 className="text-center font-bold text-4xl underline mt-5 mb-8">
         <span className="text-[#4acdd5] underline">Toy</span> Details
       </h2>
