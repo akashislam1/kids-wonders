@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import SocialLogin from "../shared/SocialLogin";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { useScrollTop } from "../../Hooks/useScrollTop";
 import useTitle from "../../Hooks/useTitle";
 
 const Login = () => {
@@ -13,9 +12,8 @@ const Login = () => {
   const [passShow, setPassShow] = useState(false);
   const [error, setError] = useState("");
   const { signIn, setUser } = useContext(AuthContext);
-  const { location, pathname } = useLocation();
+  const location = useLocation();
   const navigate = useNavigate();
-  useScrollTop(pathname);
   const from = location?.state?.from?.pathname || "/";
 
   // handle login
