@@ -3,8 +3,17 @@ import ToyTable from "./ToyTable";
 import { useState } from "react";
 
 const AllToys = () => {
-  const allToys = useLoaderData();
+  const loadAllToys = useLoaderData();
+  const [allToys, setAllToys] = useState(loadAllToys);
+  const [searchText, setSearchText] = useState("");
   const [seeAll, setSeeAll] = useState(false);
+  const handleSearch = () => {
+    fetch(`https://kids-wonders-server.vercel.app/searchToy/${searchText}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAllToys(data);
+      });
+  };
 
   return (
     <div className="mb-5">
@@ -13,11 +22,13 @@ const AllToys = () => {
       </h2>
       <div className="flex items-center justify-center mt-8 mb-5 md:mb-16">
         <input
+          onChange={(e) => setSearchText(e.target.value)}
           type="text"
           placeholder="Search"
           className="px-4 py-2 border border-[#4acdd5] rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
         />
         <button
+          onClick={handleSearch}
           type="submit"
           className="px-4 py-2 bg-[#4acdd5] text-white rounded-r-md  focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:ring-opacity-50"
         >
