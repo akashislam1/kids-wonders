@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:5000/toys"),
+        loader: () => fetch("https://kids-wonders-server.vercel.app/toys"),
       },
       {
         path: "/addtoy",
@@ -50,13 +50,13 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(`https://kids-wonders-server.vercel.app/toys/${params.id}`),
       },
       {
         path: "/updateToyDetails/:id",
         element: <UpdateToyDetails></UpdateToyDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(`https://kids-wonders-server.vercel.app/toys/${params.id}`),
       },
       {
         path: "/signup",

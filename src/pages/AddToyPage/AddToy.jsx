@@ -27,7 +27,7 @@ const AddToy = () => {
       subCategory: category,
       detail_description: description,
     };
-    fetch("http://localhost:5000/post-toy", {
+    fetch("https://kids-wonders-server.vercel.app/post-toy", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

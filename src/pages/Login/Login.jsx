@@ -24,9 +24,9 @@ const Login = () => {
       .then((result) => {
         const loggedInUser = result.user;
         setUser(loggedInUser);
-        e.target.reset();
         navigate(from, { replace: true });
         setError(" ");
+        e.target.reset();
       })
       .catch((err) => {
         setError(err.message);

@@ -29,11 +29,14 @@ const UpdateToyDetails = () => {
       confirmButtonText: "Yes ",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/update-toy/${data?._id}`, {
-          method: "PATCH",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify(data),
-        })
+        fetch(
+          `https://kids-wonders-server.vercel.app/update-toy/${data?._id}`,
+          {
+            method: "PATCH",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.modifiedCount > 0) {

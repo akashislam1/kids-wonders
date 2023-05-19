@@ -2,7 +2,7 @@ import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 
 const TabsByCategory = ({ toy }) => {
-  const { _id, toy_name, picture, price, rating } = toy;
+  const { _id, toy_name, picture, price, rating } = toy || {};
 
   return (
     <div

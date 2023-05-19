@@ -11,7 +11,9 @@ const ShopByCategory = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:5000/toys/sub-category?subCategory=${activeTab}`)
+    fetch(
+      `https://kids-wonders-server.vercel.app/toys/sub-category?subCategory=${activeTab}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
