@@ -23,7 +23,7 @@ const UpdateToyDetails = () => {
     };
     Swal.fire({
       title: "Are you Confirm?",
-      text: "You want to confirm it!",
+      text: "You want to update it!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -42,7 +42,11 @@ const UpdateToyDetails = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.modifiedCount > 0) {
-              Swal.fire("Confirmed!", "Your file has been updated.", "success");
+              Swal.fire(
+                "Updated !",
+                "Your product has been updated successfully.",
+                "success"
+              );
             }
           });
       }
