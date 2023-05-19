@@ -3,12 +3,7 @@ import car2 from "../../../assets/images/deal_section/new2.jpg";
 
 const DealSection = () => {
   return (
-    <div
-      className="overflow-x-hidden my-8"
-      data-aos="fade-up"
-      data-aos-easing="linear"
-      data-aos-duration="1500"
-    >
+    <div className="overflow-x-hidden my-8">
       <h2 className="text-center font-bold text-4xl mb-8 md:mb-0 ">
         <span className="text-[#4acdd5] ">Deal</span> Of The Day
         <span className="text-pink-500">.</span>
@@ -20,13 +15,13 @@ const DealSection = () => {
             className="w-72 rounded-xl "
             src={car1}
             alt=""
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1500"
           />
           <div
             className="space-y-4 py-5"
-            data-aos="fade-left"
+            data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
@@ -66,13 +61,13 @@ const DealSection = () => {
             className="w-72 rounded-xl "
             src={car2}
             alt=""
-            data-aos="fade-up"
+            data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500"
           />
           <div
             className="space-y-4 py-5"
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
