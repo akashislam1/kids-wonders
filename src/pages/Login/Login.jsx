@@ -4,8 +4,10 @@ import { useContext, useState } from "react";
 import SocialLogin from "../shared/SocialLogin";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useScrollTop } from "../../Hooks/useScrollTop";
+import useTitle from "../../Hooks/useTitle";
 
 const Login = () => {
+  useTitle("Login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passShow, setPassShow] = useState(false);

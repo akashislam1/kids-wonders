@@ -3,8 +3,10 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import SocialLogin from "../shared/SocialLogin";
+import useTitle from "../../Hooks/useTitle";
 
 const SignUp = () => {
+  useTitle("Sign Up");
   const [passShow, setPassShow] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

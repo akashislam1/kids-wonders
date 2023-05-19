@@ -2,8 +2,10 @@ import React from "react";
 import { useLoaderData, useLocation } from "react-router-dom";
 import { useScrollTop } from "../../Hooks/useScrollTop";
 import { Rating } from "@smastrom/react-rating";
+import useTitle from "../../Hooks/useTitle";
 
 const SingleToyDetails = () => {
+  useTitle("Toy details");
   const singledata = useLoaderData();
   const { pathname } = useLocation();
   useScrollTop(pathname);
