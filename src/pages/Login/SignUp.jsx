@@ -17,7 +17,6 @@ const SignUp = () => {
     e.preventDefault();
     const username = e.target.username.value;
     const userPhotoUrl = e.target.userphoto.value;
-    console.log(username, email, password, userPhotoUrl);
     // create user
     createUser(email, password)
       .then((result) => {

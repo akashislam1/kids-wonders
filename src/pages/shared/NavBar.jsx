@@ -58,7 +58,7 @@ const NavBar = () => {
                   Add A Toy
                 </NavLink>
                 <NavLink
-                  to="/"
+                  to="/mytoys"
                   className={({ isActive }) =>
                     isActive ? "active" : "default"
                   }
@@ -160,7 +160,7 @@ const NavBar = () => {
                     Add A Toy
                   </NavLink>
                   <NavLink
-                    to="/"
+                    to="/mytoys"
                     className={({ isActive }) =>
                       isActive ? "active" : "default"
                     }
