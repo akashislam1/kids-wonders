@@ -27,7 +27,6 @@ const AddToy = () => {
       subCategory: category,
       detail_description: description,
     };
-    console.log(data);
     fetch("http://localhost:5000/post-toy", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -41,6 +40,7 @@ const AddToy = () => {
             title: "Success",
             text: "Added Successfully !",
           });
+          e.target.reset();
         }
       });
   };
@@ -168,12 +168,12 @@ const AddToy = () => {
               className="mt-1 block w-full p-4 border border-[#4acdd5] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4acdd5] focus:border-transparent"
             ></textarea>
           </div>
-          <div>
+          <div className="text-right">
             <button
               type="submit"
               className="font-bold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline "
             >
-              Submit
+              Add
             </button>
           </div>
         </form>

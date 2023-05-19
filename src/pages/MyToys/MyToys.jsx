@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import MyToyTableRow from "./MyToyTableRow";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -13,8 +14,33 @@ const MyToys = () => {
         setMytoys(data);
       });
   }, [user]);
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/post-toy/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              const remaining = mytoys.filter((toy) => toy._id !== id);
+              setMytoys(remaining);
+            }
+          });
+      }
+    });
+  };
   return (
-    <div className="overflow-x-auto w-full md:w-3/4 mx-auto">
+    <div className="overflow-x-auto w-full md:w-3/4 mx-auto my-8">
       <table className="min-w-full divide-y divide-gray-200">
         <thead>
           <tr>
@@ -37,7 +63,7 @@ const MyToys = () => {
               Available Quantity
             </th>
             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-              View Details
+              Update Info
             </th>
           </tr>
         </thead>
@@ -47,6 +73,7 @@ const MyToys = () => {
               key={toy._id}
               toy={toy}
               index={index}
+              handleDelete={handleDelete}
             ></MyToyTableRow>
           ))}
         </tbody>
