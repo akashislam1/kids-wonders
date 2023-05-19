@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MyToyTableRow = ({ toy, index, handleDelete }) => {
   const { _id, toy_name, price, seller_name, subCategory, available_quantity } =
-    toy;
+    toy || {};
   return (
     <tr>
       <td className="px-6 py-4 whitespace-nowrap">{index + 1}</td>

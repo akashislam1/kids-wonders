@@ -1,17 +1,56 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateToyDetails = () => {
   const singledata = useLoaderData();
+  const { _id, price, detail_description, available_quantity } =
+    singledata || {};
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const price = form.price.value;
+    const quantity = form.quantity.value;
+    const description = form.description.value;
 
-  const { _id, price, detail_description, available_quantity } = singledata;
+    const data = {
+      _id,
+      price: price,
+      available_quantity: quantity,
+      detail_description: description,
+    };
+    Swal.fire({
+      title: "Are you Confirm?",
+      text: "You want to confirm it!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes ",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/update-toy/${data?._id}`, {
+          method: "PATCH",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.modifiedCount > 0) {
+              Swal.fire("Confirmed!", "Your file has been updated.", "success");
+            }
+          });
+      }
+    });
+  };
+
   return (
     <div className="w-full md:w-3/4 mx-auto">
       <h2 className="text-center font-bold text-4xl underline mt-5 mb-8">
         <span className="text-[#4acdd5] underline">Update</span> the Toy
         information
       </h2>
-      <form className="space-y-4 w-full p-4">
+      <form onSubmit={handleUpdate} className="space-y-4 w-full p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700">

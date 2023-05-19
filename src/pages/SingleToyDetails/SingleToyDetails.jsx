@@ -17,7 +17,7 @@ const SingleToyDetails = () => {
     seller_email,
     detail_description,
     available_quantity,
-  } = singledata;
+  } = singledata || {};
 
   return (
     <div className="w-full md:w-2/3 mx-auto">
