@@ -1,8 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 import ToyTable from "./ToyTable";
 import { useState } from "react";
+import useTitle from "../../Hooks/useTitle";
 
 const AllToys = () => {
+  useTitle("All toys");
   const loadAllToys = useLoaderData();
   const [allToys, setAllToys] = useState(loadAllToys);
   const [searchText, setSearchText] = useState("");
@@ -14,7 +16,6 @@ const AllToys = () => {
         setAllToys(data);
       });
   };
-
   return (
     <div className="mb-5">
       <h2 className="text-center font-bold text-4xl underline mt-5 mb-8">
