@@ -1,7 +1,18 @@
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
+
 const Footer = () => {
   return (
     <div>
       <footer className="footer  p-10 bg-base-200 text-base-content">
+        <div>
+          <h2>
+            <Link to="/" className="flex items-center gap-2">
+              <img className="w-14" src={logo} alt="" />
+              <p className="text-xl">Kids Wonders</p>
+            </Link>
+          </h2>
+        </div>
         <div>
           <span className="footer-title">Services</span>
           <a className="link link-hover">Branding</a>

@@ -11,7 +11,7 @@ const Gallery = () => {
   return (
     <div className="my-20">
       <div className="text-center font-bold text-4xl underline my-8">
-        Our Toy Collection
+        <span className="text-[#4acdd5] underline">Our</span> Toy Collection
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-4 gap-5  p-4 overflow-x-hidden overflow-y-hidden">
         <div
