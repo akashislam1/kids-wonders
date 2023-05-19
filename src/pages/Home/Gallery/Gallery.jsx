@@ -1,11 +1,11 @@
-import car1 from "../../../assets/images/Cars/car1.jpg";
-import car2 from "../../../assets/images/Cars/car2.jpg";
-import car3 from "../../../assets/images/Cars/car3.jpg";
-import car4 from "../../../assets/images/Cars/car4.jpg";
-import car5 from "../../../assets/images/Cars/car5.jpg";
-import car6 from "../../../assets/images/Cars/car6.jpg";
-import car7 from "../../../assets/images/Cars/car7.jpg";
-import car8 from "../../../assets/images/Cars/car8.jpg";
+import car1 from "../../../assets/images/Cars/car1.png";
+import car2 from "../../../assets/images/Cars/car2.png";
+import car5 from "../../../assets/images/Cars/car3.png";
+import car4 from "../../../assets/images/Cars/car4.png";
+import car3 from "../../../assets/images/Cars/car5.png";
+import car6 from "../../../assets/images/Cars/car6.png";
+import car7 from "../../../assets/images/Cars/car7.png";
+import car8 from "../../../assets/images/Cars/car8.png";
 
 const Gallery = () => {
   return (
@@ -14,9 +14,9 @@ const Gallery = () => {
         <span className="text-[#4acdd5] ">Our</span> Toy Collection
         <span className="text-pink-500">.</span>
       </div>
-      <div className=" grid grid-cols-1 md:grid-cols-4 gap-5  p-4 overflow-x-hidden overflow-y-hidden">
+      <div className=" bg-[#f6f7f8] grid grid-cols-1 md:grid-cols-4 gap-5  p-4 overflow-x-hidden overflow-y-hidden">
         <div
-          className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
+          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-down"
           data-aos-duration="1500"
         >
@@ -28,7 +28,7 @@ const Gallery = () => {
           </div>
         </div>
         <div
-          className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
+          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
@@ -40,7 +40,7 @@ const Gallery = () => {
           </div>
         </div>
         <div
-          className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
+          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-left"
           data-aos-duration="1500"
         >
@@ -52,7 +52,7 @@ const Gallery = () => {
           </div>
         </div>
         <div
-          className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
+          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-right"
           data-aos-duration="1500"
         >
@@ -64,7 +64,7 @@ const Gallery = () => {
           </div>
         </div>
         <div
-          className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
+          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-right"
           data-aos-duration="1500"
         >
@@ -76,7 +76,7 @@ const Gallery = () => {
           </div>
         </div>
         <div
-          className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
+          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
@@ -88,7 +88,7 @@ const Gallery = () => {
           </div>
         </div>
         <div
-          className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
+          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-down"
           data-aos-duration="1500"
         >
@@ -100,7 +100,7 @@ const Gallery = () => {
           </div>
         </div>
         <div
-          className=" rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
+          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3"
           data-aos="fade-left"
           data-aos-duration="1500"
         >
