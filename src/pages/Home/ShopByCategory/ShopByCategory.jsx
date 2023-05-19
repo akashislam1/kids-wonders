@@ -42,8 +42,9 @@ const ShopByCategory = () => {
 
   return (
     <div className="p-4 w-full md:w-3/4 mx-auto">
-      <h2 className="text-center font-bold text-4xl underline mt-5 mb-8">
-        <span className="text-[#4acdd5] underline">Shop</span> By Category
+      <h2 className="text-center font-bold text-4xl mt-5 mb-8">
+        <span className="text-[#4acdd5]">Shop</span> By Category
+        <span className="text-pink-500">.</span>
       </h2>
       <Tabs id="controlled-tabs" selectedTabClassName="bg-white">
         <TabList className="flex justify-center items-center gap-2 text-sm md:text-xl font-bold ">

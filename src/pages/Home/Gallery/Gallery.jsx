@@ -10,8 +10,9 @@ import car8 from "../../../assets/images/Cars/car8.jpg";
 const Gallery = () => {
   return (
     <div className="my-20">
-      <div className="text-center font-bold text-4xl underline my-8">
-        <span className="text-[#4acdd5] underline">Our</span> Toy Collection
+      <div className="text-center font-bold text-4xl  my-8">
+        <span className="text-[#4acdd5] ">Our</span> Toy Collection
+        <span className="text-pink-500">.</span>
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-4 gap-5  p-4 overflow-x-hidden overflow-y-hidden">
         <div

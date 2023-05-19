@@ -72,7 +72,7 @@ const AllToys = () => {
           </tbody>
         </table>
       </div>
-      {!seeAll && allToys.length == "20" && (
+      {!seeAll && allToys.length > 20 && (
         <div className="text-center mt-5">
           <button
             onClick={() => setSeeAll(true)}

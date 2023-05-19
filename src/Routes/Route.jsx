@@ -59,7 +59,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateToyDetails/:id",
-        element: <UpdateToyDetails></UpdateToyDetails>,
+        element: (
+          <PrivateRoute>
+            <UpdateToyDetails></UpdateToyDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://kids-wonders-server.vercel.app/toys/${params.id}`),
       },
