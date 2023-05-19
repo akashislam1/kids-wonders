@@ -46,21 +46,21 @@ const ShopByCategory = () => {
         <span className="text-[#4acdd5] underline">Shop</span> By Category
       </h2>
       <Tabs id="controlled-tabs" selectedTabClassName="bg-white">
-        <TabList className="flex md:justify-center items-center gap-2 text-xs md:text-xl font-bold ">
-          <Tab onClick={() => handleTabClick("sports-car")}>
+        <TabList className="flex justify-center items-center gap-2 text-sm md:text-xl font-bold ">
+          <Tab onClick={() => handleTabClick("sports-car")} className="p-0">
             <h2
-              className={`rounded-full  md:px-6 md:py-2  ${
+              className={`rounded-full py-1 px-2 md:px-6 md:py-2  ${
                 activeTab == "sports-car"
-                  ? " bg-cyan-400 text-white text-center"
+                  ? " bg-cyan-400 text-white md:text-center"
                   : "bg-slate-100"
               }`}
             >
               Sports cars
             </h2>
           </Tab>
-          <Tab onClick={() => handleTabClick("police-car")}>
+          <Tab onClick={() => handleTabClick("police-car")} className="p-0">
             <h2
-              className={`rounded-full  md:px-6 md:py-2  ${
+              className={`rounded-full py-1 px-2 md:px-6 md:py-2  ${
                 activeTab == "police-car"
                   ? " bg-cyan-400 text-white text-center"
                   : "bg-slate-100"
@@ -69,9 +69,9 @@ const ShopByCategory = () => {
               Police cars
             </h2>
           </Tab>
-          <Tab onClick={() => handleTabClick("fire-truck")}>
+          <Tab onClick={() => handleTabClick("fire-truck")} className="p-0">
             <h2
-              className={`rounded-full  md:px-6 md:py-2  ${
+              className={`rounded-full py-1 px-2 md:px-6 md:py-2  ${
                 activeTab == "fire-truck"
                   ? " bg-cyan-400 text-white text-center"
                   : "bg-slate-100"

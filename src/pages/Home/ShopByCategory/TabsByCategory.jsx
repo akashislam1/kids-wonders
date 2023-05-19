@@ -10,7 +10,7 @@ const TabsByCategory = ({ toy }) => {
       data-aos-duration="1500"
       className="my-4 rounded-md border border-[#4acdd5]  flex flex-col justify-between gap-3 p-5 hover:shadow-xl"
     >
-      <img className="w-64 h-64" src={picture} alt="" />
+      <img className="w-64 h-64 mx-auto" src={picture} alt="" />
       <div className="text-center border-t-2">
         <h2 className="font-bold  my-4">Name : {toy_name}</h2>
         <p>Price : ${price}</p>
