@@ -9,7 +9,7 @@ import ShopByCategory from "../ShopByCategory/ShopByCategory";
 const Home = () => {
   useTitle("Home");
   return (
-    <div>
+    <div className="p-3">
       <Banner></Banner>
       <ShopByCategory></ShopByCategory>
       <Gallery></Gallery>

@@ -2,7 +2,7 @@ import car1 from "../../../assets/images/hero_sec/green.png";
 import car2 from "../../../assets/images/hero_sec/sp8.png";
 const HeroSection = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:p-8 my-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:p-8 my-24 md:my-4">
       <div
         data-aos="fade-down"
         data-aos-easing="linear"
