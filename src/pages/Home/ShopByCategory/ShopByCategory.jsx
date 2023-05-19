@@ -41,40 +41,40 @@ const ShopByCategory = () => {
   );
 
   return (
-    <div className="p-4 w-full md:w-3/4 mx-auto">
+    <div className="p-1 w-full md:w-3/4 mx-auto">
       <h2 className="text-center font-bold text-4xl mt-5 mb-8">
         <span className="text-[#4acdd5]">Shop</span> By Category
         <span className="text-pink-500">.</span>
       </h2>
       <Tabs id="controlled-tabs" selectedTabClassName="bg-white">
         <TabList className="flex justify-center items-center gap-2 text-sm md:text-xl font-bold ">
-          <Tab onClick={() => handleTabClick("sports-car")} className="p-0">
+          <Tab onClick={() => handleTabClick("sports-car")}>
             <h2
-              className={`rounded-full py-1 px-2 md:px-6 md:py-2  ${
+              className={`rounded-lg md:rounded-full  md:px-6 md:py-2 text-center ${
                 activeTab == "sports-car"
-                  ? " bg-cyan-400 text-white md:text-center"
+                  ? " bg-cyan-400 text-white "
                   : "bg-slate-100"
               }`}
             >
               Sports cars
             </h2>
           </Tab>
-          <Tab onClick={() => handleTabClick("police-car")} className="p-0">
+          <Tab onClick={() => handleTabClick("police-car")}>
             <h2
-              className={`rounded-full py-1 px-2 md:px-6 md:py-2  ${
+              className={`rounded-lg md:rounded-full md:px-6 md:py-2 text-center ${
                 activeTab == "police-car"
-                  ? " bg-cyan-400 text-white text-center"
+                  ? " bg-cyan-400 text-white"
                   : "bg-slate-100"
               }`}
             >
               Police cars
             </h2>
           </Tab>
-          <Tab onClick={() => handleTabClick("fire-truck")} className="p-0">
+          <Tab onClick={() => handleTabClick("fire-truck")}>
             <h2
-              className={`rounded-full py-1 px-2 md:px-6 md:py-2  ${
+              className={`rounded-lg md:rounded-full md:px-6 md:py-2 text-center ${
                 activeTab == "fire-truck"
-                  ? " bg-cyan-400 text-white text-center"
+                  ? " bg-cyan-400 text-white "
                   : "bg-slate-100"
               }`}
             >
