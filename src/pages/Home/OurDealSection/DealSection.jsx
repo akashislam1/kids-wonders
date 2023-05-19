@@ -51,7 +51,7 @@ const DealSection = () => {
               <p className=" ">Mins</p>
               <p className=" ">Secs</p>
             </div>
-            <button className="font-bold text-white bg-[#4acdd5] text-center  rounded-full  hover:bg-pink-500 hover:text-white border  duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
+            <button className=" text-white bg-[#4acdd5] text-center  rounded-full  hover:bg-pink-500 hover:text-white border  duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
               ADD TO CART
             </button>
           </div>
@@ -97,7 +97,7 @@ const DealSection = () => {
               <p className=" ">Mins</p>
               <p className=" ">Secs</p>
             </div>
-            <button className="font-bold text-white bg-[#4acdd5] text-center  rounded-full  hover:bg-pink-500 hover:text-white border  duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
+            <button className=" text-white bg-[#4acdd5] text-center  rounded-full  hover:bg-pink-500 hover:text-white border  duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
               ADD TO CART
             </button>
           </div>

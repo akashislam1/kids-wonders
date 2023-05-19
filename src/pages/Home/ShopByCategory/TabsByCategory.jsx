@@ -22,7 +22,7 @@ const TabsByCategory = ({ toy }) => {
           />
         </div>
         <Link to={`/toy-details/${_id}`}>
-          <button className="font-bold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
+          <button className=" text-white bg-[#4acdd5] text-center  rounded-full  hover:bg-pink-500 hover:text-white border  duration-200 py-2 px-4  focus:outline-none focus:shadow-outline">
             View Details
           </button>
         </Link>
