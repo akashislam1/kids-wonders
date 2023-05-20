@@ -6,6 +6,14 @@ const MyToyTableRow = ({ toy, index, handleDelete }) => {
     toy || {};
   return (
     <tr>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <button
+          onClick={() => handleDelete(_id)}
+          className="font-bold text-white bg-[#f10404] text-center  rounded-full  hover:bg-white hover:text-[#f10404] border hover:border-[#f10404] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline"
+        >
+          X
+        </button>
+      </td>
       <td className="px-6 py-4 whitespace-nowrap">{index + 1}</td>
       <td className="px-6 py-4 whitespace-nowrap">{seller_name}</td>
       <td className="px-6 py-4 whitespace-nowrap">{toy_name}</td>
@@ -16,16 +24,17 @@ const MyToyTableRow = ({ toy, index, handleDelete }) => {
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
         <Link to={`/updateToyDetails/${_id}`}>
-          <button className="font-bold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline mr-3">
+          <button className=" font-semibold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline mr-3">
             Update
           </button>
         </Link>
-        <button
-          onClick={() => handleDelete(_id)}
-          className="font-bold text-white bg-[#f10404] text-center  rounded-full  hover:bg-white hover:text-[#f10404] border hover:border-[#f10404] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline"
-        >
-          X
-        </button>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <Link to={`/toy-details/${_id}`}>
+          <button className="font-semibold text-white bg-[#4acdd5] text-center  rounded  hover:bg-white hover:text-[#4acdd5] border hover:border-[#4acdd5] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline mr-3">
+            View Details
+          </button>
+        </Link>
       </td>
     </tr>
   );

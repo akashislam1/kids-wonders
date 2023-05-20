@@ -44,10 +44,11 @@ const MyToys = () => {
     });
   };
   return (
-    <div className="overflow-x-auto w-full md:w-3/4 mx-auto my-8">
+    <div className="overflow-x-auto w-full md:w-[90%] mx-auto my-8">
       <table className="min-w-full divide-y divide-gray-200">
         <thead>
           <tr>
+            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider"></th>
             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
               Sl No.
             </th>
@@ -68,6 +69,9 @@ const MyToys = () => {
             </th>
             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
               Update Info
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
+              View Details
             </th>
           </tr>
         </thead>
