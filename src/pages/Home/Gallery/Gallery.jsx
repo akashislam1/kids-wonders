@@ -8,7 +8,7 @@ const Gallery = () => {
       <div className=" grid grid-cols-2 md:grid-cols-8 gap-5  p-4 overflow-x-hidden overflow-y-hidden">
         {/* car 1 */}
         <div
-          className="bg-white hover:shadow-xl rounded-md border border-[#4acdd5]   p-5"
+          className="bg-white shadow-lg hover:shadow-xl rounded-md border border-[#4acdd5]   p-5"
           data-aos="fade-down"
           data-aos-duration="1500"
         >

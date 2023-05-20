@@ -14,7 +14,7 @@ const Login = () => {
   const { signIn, setUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location?.state?.from?.pathname || "/";
+  const from = location.state?.from.pathname || "/";
 
   // handle login
   const handleSubmit = (e) => {
