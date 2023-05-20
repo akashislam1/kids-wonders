@@ -29,7 +29,6 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("https://kids-wonders-server.vercel.app/toys"),
       },
       {
         path: "/addtoy",

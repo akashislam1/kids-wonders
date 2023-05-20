@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import NavBar from "../pages/shared/NavBar";
 import Footer from "../pages/shared/Footer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Aos from "aos";
 import { useScrollTop } from "../Hooks/useScrollTop";
 
