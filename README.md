@@ -1,6 +1,6 @@
 ## Live Link
 
-<!-- live link here -->
+- Hosted in Firebase -> [Kids Wonders](https://kids-wonders.web.app/)
 
 ## React Router Dom v6.4
 
