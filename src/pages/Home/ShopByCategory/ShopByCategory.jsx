@@ -61,7 +61,7 @@ const ShopByCategory = () => {
           </Tab>
           <Tab onClick={() => handleTabClick("police-car")}>
             <h2
-              className={` md:rounded-full  md:px-6 md:py-2 text-center ${
+              className={`rounded-lg md:rounded-full  md:px-6 md:py-2 text-center ${
                 activeTab == "police-car"
                   ? " bg-cyan-400 text-white"
                   : "bg-slate-100"

@@ -1,12 +1,3 @@
-import car1 from "../../../assets/images/Cars/car1.png";
-import car2 from "../../../assets/images/Cars/car2.png";
-import car5 from "../../../assets/images/Cars/car3.png";
-import car4 from "../../../assets/images/Cars/car4.png";
-import car3 from "../../../assets/images/Cars/car5.png";
-import car6 from "../../../assets/images/Cars/car6.png";
-import car7 from "../../../assets/images/Cars/car7.png";
-import car8 from "../../../assets/images/Cars/car8.png";
-
 const Gallery = () => {
   return (
     <div className="my-10 py-10 bg-[#f6f7f8]">
@@ -21,7 +12,11 @@ const Gallery = () => {
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car1} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/KmKrg3r/car7.png"
+            alt=""
+          />
         </div>
 
         {/* car 2 */}
@@ -30,7 +25,11 @@ const Gallery = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car2} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/2c28Wy3/bfg.png"
+            alt=""
+          />
         </div>
 
         {/* car 3 */}
@@ -39,7 +38,11 @@ const Gallery = () => {
           data-aos="fade-left"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car3} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/x1KmWQR/nm2.png"
+            alt=""
+          />
         </div>
 
         {/* car 4 */}
@@ -48,7 +51,11 @@ const Gallery = () => {
           data-aos="fade-right"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car4} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/Brm72Xx/j.png"
+            alt=""
+          />
         </div>
 
         {/* car 5 */}
@@ -57,7 +64,11 @@ const Gallery = () => {
           data-aos="fade-right"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car5} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/b6YwJxy/iut.png"
+            alt=""
+          />
         </div>
 
         {/* car 6 */}
@@ -66,7 +77,11 @@ const Gallery = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car6} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/Kq3Zpyt/fire4.png"
+            alt=""
+          />
         </div>
 
         {/* car 7 */}
@@ -75,7 +90,11 @@ const Gallery = () => {
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car7} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/pvXdSF8/s1.png"
+            alt=""
+          />
         </div>
 
         {/* car 8 */}
@@ -84,7 +103,11 @@ const Gallery = () => {
           data-aos="fade-left"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car8} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/7zndC2Y/car6.png"
+            alt=""
+          />
         </div>
 
         {/* ................ */}
@@ -94,7 +117,11 @@ const Gallery = () => {
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car1} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/JFXM0Td/re.png"
+            alt=""
+          />
         </div>
 
         {/* car 2 */}
@@ -103,7 +130,11 @@ const Gallery = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car2} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/HnBfYv4/m1.png"
+            alt=""
+          />
         </div>
 
         {/* car 3 */}
@@ -112,7 +143,11 @@ const Gallery = () => {
           data-aos="fade-left"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car3} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/3RRChfm/a.png"
+            alt=""
+          />
         </div>
 
         {/* car 4 */}
@@ -121,7 +156,11 @@ const Gallery = () => {
           data-aos="fade-right"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car4} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/GsvGCg9/car4.png"
+            alt=""
+          />
         </div>
 
         {/* car 5 */}
@@ -130,7 +169,11 @@ const Gallery = () => {
           data-aos="fade-right"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car5} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/YdL080M/sports9.png"
+            alt=""
+          />
         </div>
 
         {/* car 6 */}
@@ -139,7 +182,11 @@ const Gallery = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car6} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/2cpNm6r/ed.png"
+            alt=""
+          />
         </div>
 
         {/* car 7 */}
@@ -148,7 +195,11 @@ const Gallery = () => {
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car7} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/JRK4yvQ/ht.png"
+            alt=""
+          />
         </div>
 
         {/* car 8 */}
@@ -157,7 +208,11 @@ const Gallery = () => {
           data-aos="fade-left"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car8} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/JBhpB1T/w.png"
+            alt=""
+          />
         </div>
 
         {/* .................. */}
@@ -167,7 +222,11 @@ const Gallery = () => {
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car1} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src=" https://i.ibb.co/PZTbtdX/f.png"
+            alt=""
+          />
         </div>
 
         {/* car 2 */}
@@ -176,7 +235,11 @@ const Gallery = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car2} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/mctrVVt/new.png"
+            alt=""
+          />
         </div>
 
         {/* car 3 */}
@@ -185,7 +248,11 @@ const Gallery = () => {
           data-aos="fade-left"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car3} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/cLB6ntN/p3.png"
+            alt=""
+          />
         </div>
 
         {/* car 4 */}
@@ -194,7 +261,11 @@ const Gallery = () => {
           data-aos="fade-right"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car4} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/PtNzRgV/car8.png"
+            alt=""
+          />
         </div>
 
         {/* car 5 */}
@@ -203,7 +274,11 @@ const Gallery = () => {
           data-aos="fade-right"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car5} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/8BMSx4y/f2.png"
+            alt=""
+          />
         </div>
 
         {/* car 6 */}
@@ -212,7 +287,11 @@ const Gallery = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car6} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/MkMhHDv/car5.png"
+            alt=""
+          />
         </div>
 
         {/* car 7 */}
@@ -221,7 +300,11 @@ const Gallery = () => {
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car7} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/jDHkhJx/car3.png"
+            alt=""
+          />
         </div>
 
         {/* car 8 */}
@@ -230,7 +313,11 @@ const Gallery = () => {
           data-aos="fade-left"
           data-aos-duration="1500"
         >
-          <img className="w-96 rounded-t-md" src={car8} alt="" />
+          <img
+            className="w-96 rounded-t-md"
+            src="https://i.ibb.co/zQqqF6H/sm3-prev-ui.png"
+            alt=""
+          />
         </div>
       </div>
       <div className="text-center mt-4">
