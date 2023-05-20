@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { FaMailBulk, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -14,6 +15,21 @@ const Footer = () => {
           </h2>
         </div>
         <div>
+          <span className="footer-title">Address</span>
+          <p>
+            <FaMapMarkerAlt className="inline-block mr-1"></FaMapMarkerAlt>
+            Janata Bank Plaza, Bhojeshwar Bazar
+          </p>
+          <p>
+            <FaMapMarkerAlt className="inline-block mr-1"></FaMapMarkerAlt>
+            Bhojeshwar, Shariatpur-8020
+          </p>
+          <p>
+            <FaMapMarkerAlt className="inline-block mr-1"></FaMapMarkerAlt>
+            Dhaka, Bangladesh
+          </p>
+        </div>
+        <div>
           <span className="footer-title">Services</span>
           <a className="link link-hover">Branding</a>
           <a className="link link-hover">Design</a>
@@ -24,8 +40,8 @@ const Footer = () => {
           <span className="footer-title">Company</span>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <a className="link link-hover">Services</a>
+          <a className="link link-hover">Blog</a>
         </div>
         <div>
           <span className="footer-title">Legal</span>
@@ -35,9 +51,16 @@ const Footer = () => {
         </div>
         <div>
           <span className="footer-title">Contact Us</span>
+          <p>
+            <FaPhoneAlt className="inline-block mr-1"></FaPhoneAlt> Phone :
+            +12345678
+          </p>
           <div className="form-control  md:w-80">
             <label className="label">
-              <span className="label-text">Enter your email address</span>
+              <span className="label-text">
+                <FaMailBulk className="inline-block mr-1"></FaMailBulk> Enter
+                your email address
+              </span>
             </label>
             <div className="flex items-center justify-start">
               <input
