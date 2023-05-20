@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div className="p-3">
       <Banner></Banner>
-      <ShopByCategory></ShopByCategory>
       <Gallery></Gallery>
+      <ShopByCategory></ShopByCategory>
       <Services></Services>
       <HeroSection></HeroSection>
       <DealSection></DealSection>

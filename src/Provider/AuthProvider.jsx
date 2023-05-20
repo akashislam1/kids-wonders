@@ -10,6 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import Swal from "sweetalert2";
 
 export const AuthContext = createContext(null);
 
@@ -56,6 +57,16 @@ const AuthProvider = ({ children }) => {
     });
     return () => unsubscribe();
   }, []);
+
+  const handleAlert = () => {
+    if (!user) {
+      return Swal.fire({
+        icon: "warning",
+        title: "Warning",
+        text: "“You have to log in first to view details” !!",
+      });
+    }
+  };
   const authInfo = {
     user,
     loading,
@@ -65,6 +76,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     updateUserProfile,
     googleLogin,
+    handleAlert,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
