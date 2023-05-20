@@ -19,7 +19,7 @@ const NavBar = () => {
       });
   };
   return (
-    <div className="relative shadow-md rounded-md bg-[#4acdd5] text-white font-bold">
+    <div className="relative shadow-md rounded-b-md bg-[#4acdd5] text-white font-bold">
       <div className="w-full  mx-auto hidden md:block">
         <nav className=" z-50 p-4 rounded-md flex justify-between items-center ">
           <h2>
