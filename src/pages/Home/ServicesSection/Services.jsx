@@ -2,7 +2,7 @@ import { FaAward, FaGift, FaSyncAlt, FaTruckMoving } from "react-icons/fa";
 
 const Services = () => {
   return (
-    <div>
+    <div className="my-10 md:my-14 ">
       <h2 className="text-center font-bold text-4xl mb-8 md:mb-0 ">
         <span className="text-[#4acdd5] ">Our</span> Services
         <span className="text-pink-500">.</span>
