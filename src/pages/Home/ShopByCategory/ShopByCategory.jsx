@@ -50,7 +50,7 @@ const ShopByCategory = () => {
         <TabList className="flex justify-between md:justify-center  items-center md:gap-2 text-sm md:text-xl md:font-bold ">
           <Tab onClick={() => handleTabClick("sports-car")}>
             <h2
-              className={`rounded-lg md:rounded-full  md:px-6 md:py-2 text-center ${
+              className={`rounded-lg md:rounded-full hover:bg-pink-500 hover:text-white duration-500 md:px-6 md:py-2 text-center ${
                 activeTab == "sports-car"
                   ? " bg-cyan-400 text-white "
                   : "bg-slate-100"
@@ -61,9 +61,9 @@ const ShopByCategory = () => {
           </Tab>
           <Tab onClick={() => handleTabClick("police-car")}>
             <h2
-              className={`rounded-lg md:rounded-full  md:px-6 md:py-2 text-center ${
+              className={`rounded-lg md:rounded-full hover:bg-pink-500 hover:text-white duration-500 md:px-6 md:py-2 text-center ${
                 activeTab == "police-car"
-                  ? " bg-cyan-400 text-white"
+                  ? " bg-cyan-400 text-white "
                   : "bg-slate-100"
               }`}
             >
@@ -72,7 +72,7 @@ const ShopByCategory = () => {
           </Tab>
           <Tab onClick={() => handleTabClick("fire-truck")}>
             <h2
-              className={`rounded-lg md:rounded-full  md:px-6 md:py-2 text-center ${
+              className={`rounded-lg md:rounded-full hover:bg-pink-500 hover:text-white duration-500 md:px-6 md:py-2 text-center ${
                 activeTab == "fire-truck"
                   ? " bg-cyan-400 text-white "
                   : "bg-slate-100"

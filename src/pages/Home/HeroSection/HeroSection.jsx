@@ -24,7 +24,7 @@ const HeroSection = () => {
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="1500"
-        className="bg-[#ffe368] p-4 flex flex-col-reverse md:flex-row-reverse items-center justify-around gap-4 rounded-xl"
+        className="bg-[#ffe368] p-4 flex flex-col md:flex-row-reverse items-center justify-around gap-4 rounded-xl"
       >
         <div className="space-y-5">
           <h3 className="font-bold text-white text-5xl">New Arrival</h3>
