@@ -24,11 +24,12 @@ const AddToy = () => {
       seller_name: sellerName,
       seller_email: sellerEmail,
       available_quantity: quantity,
-      price: price,
+      price,
       rating: rating,
       subCategory: category,
       detail_description: description,
     };
+
     fetch("https://kids-wonders-server.vercel.app/post-toy", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -113,7 +114,7 @@ const AddToy = () => {
                 Price
               </label>
               <input
-                type="text"
+                type="number"
                 name="price"
                 placeholder="$200"
                 required

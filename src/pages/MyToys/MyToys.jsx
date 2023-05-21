@@ -16,7 +16,6 @@ const MyToys = () => {
         setMytoys(data);
       });
   }, [user]);
-
   // delete method
   const handleDelete = (id) => {
     Swal.fire({
