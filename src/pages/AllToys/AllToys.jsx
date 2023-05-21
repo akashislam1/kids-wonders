@@ -1,4 +1,3 @@
-import { useLoaderData } from "react-router-dom";
 import ToyTable from "./ToyTable";
 import { useEffect, useState } from "react";
 import useTitle from "../../Hooks/useTitle";
