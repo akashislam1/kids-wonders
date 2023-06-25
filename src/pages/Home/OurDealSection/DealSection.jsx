@@ -3,13 +3,13 @@ import car2 from "../../../assets/images/deal_section/new2.jpg";
 
 const DealSection = () => {
   return (
-    <div className="my-8">
-      <h2 className="text-center font-bold text-4xl mb-8 md:mb-0 ">
+    <div className="min-h-screen md:p-10 space-y-3">
+      <h2 className="text-center font-bold text-4xl  my-8">
         <span className="text-[#4acdd5] ">Deal</span> Of The Day
         <span className="text-pink-500">.</span>
       </h2>
 
-      <div className="overflow-x-hidden overflow-y-hidden grid grid-cols-1 md:grid-cols-2 gap-5 md:p-10">
+      <div className="overflow-x-hidden overflow-y-hidden grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div className="bg-slate-100 p-3 flex flex-col md:flex-row gap-5 rounded-2xl">
           <img
             className="w-full md:w-72 rounded-xl mx-auto "

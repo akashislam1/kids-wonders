@@ -2,14 +2,19 @@ import { FaUserTie } from "react-icons/fa";
 
 const Blogs = () => {
   return (
-    <div className="my-10 py-10">
+    <div className="min-h-screen my-10">
       <div className="text-center font-bold text-4xl  my-8">
         <span className="text-[#4acdd5] ">Latest</span> Blog
         <span className="text-pink-500">.</span>
       </div>
       <div className="overflow-x-hidden overflow-y-hidden grid grid-cols-1 md:grid-cols-2 gap-5 md:p-10">
         {/* Card 1 */}
-        <div className="bg-slate-100 p-3 flex flex-col md:flex-row gap-5 rounded-2xl">
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          className="bg-slate-100 p-3 flex flex-col md:flex-row gap-5 rounded-2xl"
+        >
           <img
             className="w-full md:w-72 rounded-xl mx-auto "
             src="https://i.ibb.co/vQXgfPm/MKSX2028-YELLOW-600x.webp"
@@ -34,7 +39,12 @@ const Blogs = () => {
           </div>
         </div>
         {/* card 2 */}
-        <div className="bg-slate-100 p-3 flex flex-col md:flex-row-reverse gap-5 rounded-2xl">
+        <div
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          className="bg-slate-100 p-3 flex flex-col md:flex-row-reverse gap-5 rounded-2xl"
+        >
           <img
             className="w-full md:w-72 rounded-xl mx-auto "
             src="https://i.ibb.co/c3CGXBY/New-Design-12-V-4-WD-Rechargeable-Kids-Electric-Toy-Vehicle-Children-Powerful-Car-with-Drift-Functio.webp"
