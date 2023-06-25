@@ -1,4 +1,5 @@
 import useTitle from "../../../Hooks/useTitle";
+import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Blogs from "../Blogs/Blogs";
 import Contact from "../Contact/Contact";
@@ -13,6 +14,7 @@ const Home = () => {
   return (
     <div className="p-3">
       <Banner></Banner>
+      <About></About>
       <Gallery></Gallery>
       <ShopByCategory></ShopByCategory>
       <Services></Services>
