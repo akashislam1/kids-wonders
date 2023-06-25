@@ -5,7 +5,7 @@ const Contact = () => {
         <span className="text-[#4acdd5] ">Contact</span>
         <span className="text-pink-500">.</span>
       </div>
-      <div className="overflow-x-hidden overflow-y-hidden grid  md:grid-cols-2 gap-5 md:p-10">
+      <div className="overflow-x-hidden overflow-y-hidden grid md:grid-cols-2 gap-5 md:p-10">
         <div
           data-aos="fade-right"
           data-aos-easing="linear"

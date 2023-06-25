@@ -7,10 +7,10 @@ const About = () => {
         <span className="text-[#4acdd5] ">About</span> US
         <span className="text-pink-500">.</span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-x-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-x-hidden overflow-y-hidden">
         <div
           className=""
-          data-aos="fade-right"
+          data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
         >
@@ -22,7 +22,7 @@ const About = () => {
         </div>
         <div
           className="space-y-4"
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="1500"
         >

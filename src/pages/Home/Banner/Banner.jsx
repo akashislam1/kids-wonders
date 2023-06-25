@@ -1,7 +1,7 @@
 import bannerImg from "../../../assets/images/Banner_img/bannerImage.jpg";
 const Banner = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 md:my-14  md:p-10 overflow-x-hidden">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 md:my-14  md:p-10 overflow-x-hidden overflow-y-hidden">
       <div
         className=""
         data-aos="fade-right"

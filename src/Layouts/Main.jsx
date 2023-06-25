@@ -12,7 +12,7 @@ const Main = () => {
     Aos.init();
   }, []);
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-x-hidden overflow-y-hidden">
       <NavBar></NavBar>
       <div className=" md:min-h-[calc(100vh-100px)]">
         <Outlet />
