@@ -12,7 +12,7 @@ const DealSection = () => {
       <div className="overflow-x-hidden overflow-y-hidden grid grid-cols-1 md:grid-cols-2 gap-5 md:p-10">
         <div className="bg-slate-100 p-3 flex flex-col md:flex-row gap-5 rounded-2xl">
           <img
-            className="w-72 rounded-xl "
+            className="w-full md:w-72 rounded-xl mx-auto "
             src={car1}
             alt=""
             data-aos="fade-up"
@@ -58,7 +58,7 @@ const DealSection = () => {
         </div>
         <div className="bg-slate-100 p-3 flex flex-col md:flex-row gap-5 rounded-2xl">
           <img
-            className="w-72 rounded-xl "
+            className="w-full md:w-72 rounded-xl mx-auto"
             src={car2}
             alt=""
             data-aos="fade-down"

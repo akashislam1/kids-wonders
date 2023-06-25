@@ -1,5 +1,6 @@
 import useTitle from "../../../Hooks/useTitle";
 import Banner from "../Banner/Banner";
+import Blogs from "../Blogs/Blogs";
 import Gallery from "../Gallery/Gallery";
 import HeroSection from "../HeroSection/HeroSection";
 import DealSection from "../OurDealSection/DealSection";
@@ -16,6 +17,7 @@ const Home = () => {
       <Services></Services>
       <HeroSection></HeroSection>
       <DealSection></DealSection>
+      <Blogs></Blogs>
     </div>
   );
 };
