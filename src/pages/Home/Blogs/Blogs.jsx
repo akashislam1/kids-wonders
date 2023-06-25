@@ -1,4 +1,5 @@
-import { FaUserTie } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   return (
@@ -24,7 +25,7 @@ const Blogs = () => {
             <h4 className="font-bold text-xl text-[#4acdd5]">February 23</h4>
             <div className="space-y-4">
               <p className="flex items-center font-semibold text-pink-500 gap-2">
-                <FaUserTie></FaUserTie>
+                <FaUserAlt></FaUserAlt>
                 By John Doe
               </p>
               <h2 className="font-bold text-xl">Christmas Sale Is Hear</h2>
@@ -54,7 +55,7 @@ const Blogs = () => {
             <h4 className="font-bold text-xl text-[#4acdd5]">March 23</h4>
             <div className="space-y-4">
               <p className="flex items-center font-semibold text-pink-500 gap-2">
-                <FaUserTie></FaUserTie>
+                <FaUserAlt></FaUserAlt>
                 By William Kerry
               </p>
               <h2 className="font-bold text-xl">Viderer Voluptatum Eum</h2>
@@ -70,9 +71,11 @@ const Blogs = () => {
         </div>
       </div>
       <div className="text-center my-4">
-        <button className=" text-white bg-[#4acdd5] text-center  rounded-full  hover:bg-pink-500 hover:text-white border  duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
-          SEE MORE
-        </button>
+        <Link to="/blogs">
+          <button className=" text-white bg-[#4acdd5] text-center  rounded-full  hover:bg-pink-500 hover:text-white border  duration-200 py-2 px-4  focus:outline-none focus:shadow-outline ">
+            SEE MORE
+          </button>
+        </Link>
       </div>
     </div>
   );
